@@ -1,0 +1,29 @@
+# Usa a imagem oficial do Python como base
+
+FROM python:3.11-slim
+
+# Define o diretório de trabalho dentro do contêiner
+
+WORKDIR /app
+
+# Copia o arquivo de dependências para o contêiner
+
+COPY requirements.txt .
+
+# Instala as dependências do Python
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia o script principal do monitoramento para o contêiner
+
+COPY app.py .
+
+# Define a variável de ambiente PORT que o Cloud Run exige
+
+ENV PORT 8080
+
+# Comando que será executado quando o contêiner for iniciado.
+
+# Ele inicia o servidor Flask, que é a porta de entrada para o Cloud Scheduler.
+
+CMD ["python", "app.py"]

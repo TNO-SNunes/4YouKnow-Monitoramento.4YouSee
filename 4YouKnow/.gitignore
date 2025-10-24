@@ -1,0 +1,22 @@
+# Ignorar pasta do ambiente virtual
+
+venv/
+.env
+
+# Arquivos de cache e temporários
+
+pycache/
+*.pyc
+*.log
+.json # Ignora player_status_anterior.json
+/tmp/
+
+# Configurações de IDEs
+
+.vscode/
+.idea/
+
+# macOS e Windows
+
+.DS_Store
+Thumbs.db

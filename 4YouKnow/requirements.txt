@@ -1,0 +1,4 @@
+requests
+python-telegram-bot==20.8
+Flask
+pytz
