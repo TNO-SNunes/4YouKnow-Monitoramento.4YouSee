@@ -128,12 +128,4 @@ Crie os dois Jobs de agendamento usando a URL do Serviço que você acabou de ob
 -   Frequência:  0 7,10,13,16,20 * * * (Horários fixos)
     
 -   URL:  [SUA_URL_DO_CLOUD_RUN]/?mode=summary
-    
-
-## 🤖 Bot Interativo (Opcional)
-
-Para responder a comandos como !status no Discord, você deve hospedar o discord_status_bot.py em um servidor 24/7 (como Google Compute Engine), pois ele exige uma conexão persistente.
-
-1.  Obtenha um Discord Bot Token separado.
-    
-2.  Hospede o script, definindo a variável de ambiente DISCORD_BOT_TOKEN.
+  
