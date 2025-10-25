@@ -29,10 +29,12 @@ O sistema opera em dois modos distintos, acionados por agendamentos diferentes:
 
 Todas as credenciais sensíveis devem ser injetadas de forma segura. O seu código (app.py) depende delas.
 
-| **Modo de Execução**       	| **Agendamento**                                 	| **Comportamento**                                                                                                            	|
-|----------------------------	|-------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------	|
-| **DELTA**(?mode=delta)     	| A cada 10 minutos<br>(*/10 * * * *)             	| **ALERTA RÁPIDO.** Verifica mudanças de status.<br>**Notifica SOMENTE se houver alteração** (silêncio total caso contrário). 	|
-| **SUMMARY**(?mode=summary) 	| Horários fixos <br>(0, 7, 10, 13, 16, 20 * * *) 	| **RELATÓRIO GERAL.** Envia o status <br>completo de **todos** os Players (ID, Nome, Status, Último Contato).                 	|
+| **Variável**        	| **Descrição**                                      	| **Onde Obter**                                                       	|
+|---------------------	|----------------------------------------------------	|----------------------------------------------------------------------	|
+| API_TOKEN           	| Token secreto da API 4YouSee.                      	| Painel da 4YouSee.                                                   	|
+| TELEGRAM_TOKEN      	| Token do Bot do Telegram.                          	| Bot de preferência do Telegram (@BotFather utilizado nesse projeto). 	|
+| TELEGRAM_CHAT_ID    	| ID do Chat/Grupo para onde enviar as notificações. 	| @userinfobot.                                                        	|
+| DISCORD_WEBHOOK_URL 	| URL completa do Webhook do Discord.                	| Configurações do canal do Discord (Aba Integrações).                 	|
 
 ### 3. Implantação no Cloud Run (Via Cloud Shell)
 
