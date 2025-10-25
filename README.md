@@ -7,23 +7,10 @@ Este projeto transforma a API da 4Yousee em um sistema de monitoramento profissi
 
 O sistema opera em dois modos distintos, acionados por agendamentos diferentes:
 
-Modo
-
-Agendamento Típico
-
-Comportamento
-
-DELTA (?mode=delta)
-
-A cada 10 minutos (*/10 * * * *)
-
-ALERTA RÁPIDO. Verifica mudanças de status. Notifica SOMENTE se houver alteração (silêncio total caso contrário).
-
-SUMMARY (?mode=summary)
-
-Horários Fixos (0 7,10,13,16,20 * * *)
-
-RELATÓRIO GERAL. Envia o status completo de todos os players (ID, Nome, Status, Contato).
+| **Modo de Execução**       	| **Agendamento**                                 	| **Comportamento**                                                                                                            	|
+|----------------------------	|-------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------	|
+| **DELTA**(?mode=delta)     	| A cada 10 minutos<br>(*/10 * * * *)             	| **ALERTA RÁPIDO.** Verifica mudanças de status.<br>**Notifica SOMENTE se houver alteração** (silêncio total caso contrário). 	|
+| **SUMMARY**(?mode=summary) 	| Horários fixos <br>(0, 7, 10, 13, 16, 20 * * *) 	| **RELATÓRIO GERAL.** Envia o status <br>completo de **todos** os Players (ID, Nome, Status, Último Contato).                 	|
 
 ## ⚙️ Setup de Infraestrutura (Google Cloud)
 
