@@ -87,6 +87,10 @@ def executar_monitoramento_delta(players_data, local_time_str):
         # Ordem de Notificação: Discord primeiro
         if DISCORD_ENABLED:
             enviar_notificacao_alerta_discord(mudancas, local_time_str)
+
+        # 2. INTERVALO DE SEGURANÇA
+        time.sleep(2)
+        
         if TELEGRAM_ENABLED:
             enviar_notificacao_alerta_telegram(mudancas, local_time_str)
     else:
@@ -102,6 +106,10 @@ def executar_monitoramento_resumo(players_data, local_time_str):
     # Ordem de Notificação: Discord primeiro
     if DISCORD_ENABLED:
         enviar_notificacao_resumo_discord(players_data, local_time_str)
+
+    # 2. INTERVALO DE SEGURANÇA
+    time.sleep(2)
+
     if TELEGRAM_ENABLED:
         enviar_notificacao_resumo_telegram(players_data, local_time_str)
     
